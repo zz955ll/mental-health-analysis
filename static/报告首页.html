@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青少年心理健康数据分析报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Microsoft YaHei', 'SimHei', 'PingFang SC', sans-serif; 
+            background: #f0f2f5; 
+            padding: 20px; 
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .标题 { text-align: center; margin-bottom: 30px; }
+        .主标题 { font-size: 32px; color: #1a1a2e; margin-bottom: 10px; font-weight: bold; }
+        .副标题 { font-size: 16px; color: #666; }
+        .图表网格 { display: grid; grid-template-columns: repeat(auto-fit, minmax(580px, 1fr)); gap: 25px; }
+        .图表卡片 { background: white; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s; }
+        .图表卡片:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .图表标题 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; font-size: 18px; font-weight: bold; }
+        .图表内容 { padding: 15px; background: #fafafa; }
+        iframe { width: 100%; height: 480px; border: none; background: white; border-radius: 8px; }
+        .页脚 { text-align: center; margin-top: 40px; padding: 20px; color: #888; border-top: 1px solid #ddd; font-size: 14px; }
+        @media (max-width: 768px) { .图表网格 { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="标题">
+            <div class="主标题">📊 青少年心理健康数据分析报告</div>
+            <div class="副标题">基于社交媒体使用、睡眠质量、压力焦虑与抑郁关系的多维度分析</div>
+        </div>
+        <div class="图表网格">
+
+            <div class="图表卡片">
+                <div class="图表标题">📊 数据分布箱线图</div>
+                <div class="图表内容">
+                    <iframe src="01_数据分布箱线图.html"></iframe>
+                </div>
+            </div>
+
+            <div class="图表卡片">
+                <div class="图表标题">🎯 抑郁组与非抑郁组指标对比</div>
+                <div class="图表内容">
+                    <iframe src="02_抑郁组对比雷达图.html"></iframe>
+                </div>
+            </div>
+
+            <div class="图表卡片">
+                <div class="图表标题">🔥 各指标相关性热力图</div>
+                <div class="图表内容">
+                    <iframe src="03_相关性热力图.html"></iframe>
+                </div>
+            </div>
+
+            <div class="图表卡片">
+                <div class="图表标题">📉 与抑郁相关程度排序</div>
+                <div class="图表内容">
+                    <iframe src="04_相关性排序图.html"></iframe>
+                </div>
+            </div>
+
+            <div class="图表卡片">
+                <div class="图表标题">📱 社交媒体使用与抑郁关系</div>
+                <div class="图表内容">
+                    <iframe src="05_社交媒体与抑郁率.html"></iframe>
+                </div>
+            </div>
+
+            <div class="图表卡片">
+                <div class="图表标题">😴 睡眠时长与抑郁关系</div>
+                <div class="图表内容">
+                    <iframe src="06_睡眠时长与抑郁率.html"></iframe>
+                </div>
+            </div>
+
+            <div class="图表卡片">
+                <div class="图表标题">⚠️ 压力水平与抑郁关系</div>
+                <div class="图表内容">
+                    <iframe src="07_压力水平与抑郁率.html"></iframe>
+                </div>
+            </div>
+
+            <div class="图表卡片">
+                <div class="图表标题">😰 焦虑水平与抑郁关系</div>
+                <div class="图表内容">
+                    <iframe src="08_焦虑水平与抑郁率.html"></iframe>
+                </div>
+            </div>
+
+        </div>
+        <div class="页脚">
+            <p>📌 数据来源：青少年心理健康调查数据集 | 分析工具：Python + Plotly</p>
+            <p>💡 解读说明：相关系数绝对值越接近1表示相关性越强 | 红色代表正相关，蓝色代表负相关</p>
+            <p>📅 报告生成时间：2026年05月13日 18:05:02</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+"# 青少年心理健康数据分析系统" 
+"" 
+"## 技术栈" 
+"- 后端：Django + Redis + JWT" 
+"- 前端：uni-app + Vue3" 
+"- 机器学习：RandomForest" 
+"- 部署：Docker" 
